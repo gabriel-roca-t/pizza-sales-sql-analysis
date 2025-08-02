@@ -76,7 +76,7 @@ SELECT
     ROUND((AVG(tables_occupied) * 4 / 40) * 100, 2) AS seat_occupation_pct
 FROM hourly_per_day
 GROUP BY hour_of_day
-ORDER BY hour_of_day;
+ORDER BY avg_tables_occupied desc;
 
 
 -- Q4: Which pizzas are the best and worst sellers?
@@ -203,4 +203,5 @@ performance of a restaurant.
 Author: Gabriel Roca
 =========================================================
 */
+
 
